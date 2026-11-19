@@ -17,6 +17,11 @@ Wszystkie przekształcenia, łączenia tabel i przygotowanie danych pod raport d
 * Składnia T-SQL w tym projekcie wynikała z wymogów środowiska Azure SQL i traktowałem ją jako niezbędne narzędzie do zrealizowania celu, a nie chęć przestawiania się na nową składnię.
 
 ## Raport Power BI i wnioski z danych
+
+<img width="1316" height="798" alt="relacje" src="https://github.com/user-attachments/assets/504fb6e0-d9d0-4e0b-9ef7-0c1c99bf9d8f" />
+
+
+
 Raport podzieliłem na 3 strony, żeby przechodzić od ogólnego obrazu do konkretów:
 
 1. **Sprzedaż (dane w stylu ERP):** przychody, liczba zamówień i podgląd statusów (żeby wyłapać anulacje).
@@ -45,6 +50,7 @@ DIVIDE(ZamowieniaAnulowane, LiczbaZamowien, 0)
 
 
 
+
 2. **Ruch i sesje (imitacja Google Analytics):** wyniki ruchu, liczba sesji i źródła wizyt.
    * *Zastosowane miary:*
 ```dax
@@ -61,6 +67,7 @@ DIVIDE([Łączny koszt reklam], [Łączna liczba sesji], 0)
 ```
 
 <img width="1315" height="747" alt="analiza_aktywnosci_i_ruchu_ga" src="https://github.com/user-attachments/assets/05a1ac75-d048-44c1-9ea8-839260249cce" />
+
 
 
 
