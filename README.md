@@ -47,9 +47,44 @@ DIVIDE(ZamowieniaAnulowane, LiczbaZamowien, 0)
 
 2. **Ruch i sesje (imitacja Google Analytics):** wyniki ruchu, liczba sesji i źródła wizyt.
    * *Zastosowane miary:*
+```dax
+Łączna liczba sesji = 
+CALCULATE(SUM(fact_ga_sessions[sessions_count]), USERELATIONSHIP(dim_date[Date], fact_ga_sessions[event_date]))
+```
+```dax
+Łączny koszt reklam = 
+CALCULATE(SUM(fact_ga_sessions[ad_cost_pln]), USERELATIONSHIP(dim_date[Date], fact_ga_sessions[event_date]))
+```
+```dax
+Średni koszt za sesję = 
+DIVIDE([Łączny koszt reklam], [Łączna liczba sesji], 0)
+```
+
+<img width="1315" height="747" alt="analiza_aktywnosci_i_ruchu_ga" src="https://github.com/user-attachments/assets/05a1ac75-d048-44c1-9ea8-839260249cce" />
+
+
 
 3. **Wyniki i opłacalność kampanii (ROI):** zestawienie wydatków na reklamy z przychodem.
    * *Zastosowane miary:*
+```dax
+Zwrot z nakładów na reklamę = 
+DIVIDE([Całkowity Przychód], [Łączny koszt reklam], 0)
+```
+```dax
+Zysk netto kampanii = 
+[Całkowity Przychód] - [Łączny koszt reklam]
+```
+```dax
+Średni koszt zdobycia zamówienia = 
+DIVIDE([Łączny koszt reklam], [Liczba Zamówień], 0)
+```
+```dax
+Wskaźnik Konwersji = 
+DIVIDE([Liczba Zamówień], [Łączna liczba sesji], 0)
+```
+
+<img width="1314" height="746" alt="erp_+_ga" src="https://github.com/user-attachments/assets/5f33c196-6c49-4042-ac77-07a733a9c98e" />
+
 
 
 ## Podsumowanie i wnioski biznesowe
