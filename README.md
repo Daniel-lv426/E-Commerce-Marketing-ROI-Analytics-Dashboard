@@ -70,7 +70,6 @@ DIVIDE([Łączny koszt reklam], [Łączna liczba sesji], 0)
 
 
 
-
 3. **Wyniki i opłacalność kampanii (ROI):** zestawienie wydatków na reklamy z przychodem.
    * *Zastosowane miary:*
 ```dax
