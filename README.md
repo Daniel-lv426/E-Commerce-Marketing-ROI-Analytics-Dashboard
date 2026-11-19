@@ -19,8 +19,7 @@ Wszystkie przekształcenia, łączenia tabel i przygotowanie danych pod raport d
 ## Raport Power BI i wnioski z danych
 
 <img width="1316" height="798" alt="relacje" src="https://github.com/user-attachments/assets/504fb6e0-d9d0-4e0b-9ef7-0c1c99bf9d8f" />
-
-
+<br><br>
 
 Raport podzieliłem na 3 strony, żeby przechodzić od ogólnego obrazu do konkretów:
 
@@ -47,9 +46,7 @@ DIVIDE(ZamowieniaAnulowane, LiczbaZamowien, 0)
 ```
 
 <img width="1316" height="743" alt="przeglad_biznesowy_erp" src="https://github.com/user-attachments/assets/cf450895-9e21-4913-8a9b-4220e0513635" />
-
-
-
+<br><br>
 
 2. **Ruch i sesje (imitacja Google Analytics):** wyniki ruchu, liczba sesji i źródła wizyt.
    * *Zastosowane miary:*
@@ -67,8 +64,7 @@ DIVIDE([Łączny koszt reklam], [Łączna liczba sesji], 0)
 ```
 
 <img width="1315" height="747" alt="analiza_aktywnosci_i_ruchu_ga" src="https://github.com/user-attachments/assets/05a1ac75-d048-44c1-9ea8-839260249cce" />
-
-
+<br><br>
 
 3. **Wyniki i opłacalność kampanii (ROI):** zestawienie wydatków na reklamy z przychodem.
    * *Zastosowane miary:*
