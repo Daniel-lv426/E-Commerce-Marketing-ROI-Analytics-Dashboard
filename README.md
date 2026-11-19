@@ -20,7 +20,30 @@ Wszystkie przekształcenia, łączenia tabel i przygotowanie danych pod raport d
 Raport podzieliłem na 3 strony, żeby przechodzić od ogólnego obrazu do konkretów:
 
 1. **Sprzedaż (dane w stylu ERP):** przychody, liczba zamówień i podgląd statusów (żeby wyłapać anulacje).
-   * *Zastosowane miary:* 
+   * *Zastosowane miary:*
+```dax
+Całkowity Przychód = 
+SUM(fact_erp_sales[order_amount])
+```
+```dax
+Liczba Zamówień = 
+COUNTROWS(fact_erp_sales)
+```
+```dax
+Średnia Wartość Zamówienia = 
+AVERAGEX(fact_erp_sales, [Całkowity Przychód])
+```
+```dax
+Wskaźnik Anulowań = 
+VAR LiczbaZamowien = [Liczba Zamówień]
+VAR ZamowieniaAnulowane = CALCULATE([Liczba Zamówień], dim_status[order_status] = "Anulowane")
+RETURN
+DIVIDE(ZamowieniaAnulowane, LiczbaZamowien, 0)
+```
+
+<img width="1316" height="743" alt="przeglad_biznesowy_erp" src="https://github.com/user-attachments/assets/cf450895-9e21-4913-8a9b-4220e0513635" />
+
+
 
 2. **Ruch i sesje (imitacja Google Analytics):** wyniki ruchu, liczba sesji i źródła wizyt.
    * *Zastosowane miary:*
