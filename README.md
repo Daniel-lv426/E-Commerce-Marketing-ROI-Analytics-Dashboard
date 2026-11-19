@@ -86,8 +86,7 @@ DIVIDE([Liczba Zamówień], [Łączna liczba sesji], 0)
 ```
 
 <img width="1314" height="746" alt="erp_+_ga" src="https://github.com/user-attachments/assets/5f33c196-6c49-4042-ac77-07a733a9c98e" />
-
-
+<br><br><br>
 
 ## Podsumowanie i wnioski biznesowe
 * Dane pokazały spore przepalenie budżetu marketingowego – w ogólnym rozrachunku bilans wyszedł ponad 15 tysięcy złotych na minusie.
